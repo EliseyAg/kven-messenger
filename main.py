@@ -1,13 +1,18 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect, url_for
+from flask_login import LoginManager, login_required, current_user
+
+from RabbitMQ.RabbitMQ_Manager import RabbitMQManager
 
 
 app = Flask(__name__)
 
 
-@app.route('/messenger')
+@app.route('/')
 def messenger():
-    return 'Messenger'
+    return render_template("messenger.html")
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    RabbitMQManager.__init__("localhost", 5672)
+
+    app.run(host='0.0.0.0', port=5000)
