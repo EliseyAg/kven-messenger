@@ -10,9 +10,14 @@ app.config["SECRET_KEY"] = "secret!"
 socketio = SocketIO(app)
 
 
-@app.route('/')
+@app.route('/messenger')
 def messenger():
     return render_template("messenger.html")
+
+
+@app.route('/personlist')
+def personlist():
+    return render_template("personlist.html")
 
 
 if __name__ == '__main__':
