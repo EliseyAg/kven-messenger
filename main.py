@@ -20,6 +20,11 @@ def personlist():
     return render_template("personlist.html")
 
 
+@app.route('/chat')
+def chat():
+    return render_template("chat.html")
+
+
 if __name__ == '__main__':
     RabbitMQManager.__init__("localhost", 5672)
     RabbitMQManager.declare_queue("messages")

@@ -19,11 +19,13 @@
 </div>
 
 <div class="chat_footer">
-    <form autocomplete="off" method="post">
+    <form id="post_message_form" autocomplete="off" method="post">
         <div><label>Написать: </label><input type="text" name="message" value="" requered><input type="submit" value="Отправить"></div>
     </form>
 </div>
 
-<script type="text/javascript" src={{url_for('static',filename='JS/autorefresh.js')}}></script>
+
+<script src='https://cdn.socket.io/4.8.1/socket.io.min.js'></script>
+<script type="text/javascript" src={{url_for('static',filename='JS/chat_script.js')}}></script>
 
 {% endblock %}
