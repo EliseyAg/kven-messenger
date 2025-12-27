@@ -3,6 +3,7 @@ from flask_login import LoginManager, login_required, current_user
 from flask_socketio import SocketIO, emit
 
 from RabbitMQ.RabbitMQ_Manager import RabbitMQManager
+from UserLogin import UserLogin
 
 
 app = Flask(__name__, static_folder="static")
