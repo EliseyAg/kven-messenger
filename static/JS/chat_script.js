@@ -9,7 +9,8 @@ socket.on("connect", function () {
 
 function post_message()
 {
-
+    const usernameInput = document.querySelector('input[name="message"]');
+    socket.emit("message_sent");Sma
 }
 
 const form = document.getElementById('post_message_form');
